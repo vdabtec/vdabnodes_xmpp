@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<nodedefs>
+<nodedef name="XMPPSource" class="vdab.extnodes.xmpp.XMPPSource">
+	<attr name="Group">XMPP</attr>
+	<attr name="ConsumedEventTypes">NONE</attr>
+    <attr name="PublishedEventTypes">Event,Trigger</attr>
+    <attr name="NodeDescTemplate">to ${User}</attr>
+    <attr name="NodeOverview">Listens for and receives XMPP messages. (Also Google Hangouts)</attr>	
+    <attr name="NodeQuality" >Alpha</attr>     
+    <datadef  name="Password">
+       <attr name="EditOrder" type="Integer">23</attr>   
+       <attr name="Desc" >Your XMPP or GMail Password.</attr>		 
+		<attr name="Category">Required</attr>
+		<attr name="SpecialType">Password</attr>
+	</datadef>
+	<datadef name="User">
+	   <attr name="EditOrder" type="Integer">21</attr>   
+	   <attr name="Desc" >Your XMPP or GMail Password.</attr>		 	    
+		<attr name="Category">Required</attr>
+	</datadef>
+	<datadef name="StartingPresence">
+	   <attr name="EditOrder" type="Integer">22</attr>    
+	   	<attr name="Desc" >If set, sets the presence of the user when the flow starts.</attr>	
+	   	<attr name="Enum">IMPresenceType</attr>  	    
+		<attr name="Category">Standard</attr>
+	</datadef>
+	<datadef name="Port">
+	   	<attr name="EditOrder" type="Integer">12</attr>
+	   	<attr name="Desc" >The Port of the XMPP server. (default is 5222)</attr>	
+		<attr name="Category">Required</attr>
+	</datadef>
+	<datadef name="Host">
+	    <attr name="EditOrder" type="Integer">11</attr>
+	  	<attr name="Desc" >The URL of the XMPP server. (Google is talk.google.com)</attr>	  
+			<attr name="Category">Required</attr>
+	</datadef>
+	<datadef name="Service">
+	   <attr name="EditOrder" type="Integer">13</attr>    
+	   	<attr name="Desc" >The XMPP Service provider. (Google is google.com)</attr>	  	    
+		<attr name="Category">Required</attr>
+	</datadef>
+	<datadef name="OnlyFrom">
+	   <attr name="EditOrder" type="Integer">14</attr>    
+	   	<attr name="Desc" >Only process requests from this source (XMPP or GMail addresss)</attr>	  	    
+		<attr name="Category">Standard</attr>
+	</datadef>
+</nodedef>
+<nodedef name="XMPPTarget" class="vdab.extnodes.xmpp.XMPPTarget">
+	<attr name="Group">XMPP</attr>
+	<attr name="ConsumedEventTypes">Event,Trigger</attr>
+    <attr name="PublishedEventTypes">NONE</attr>
+    <attr name="NodeDescTemplate">to ${Receiver}</attr>
+    <attr name="NodeOverview">Sends an instant message using XMPP. (Also Google Hangouts)</attr>	
+    <attr name="NodeQuality" >Alpha</attr>     
+    <datadef  name="Password">
+        <attr name="EditOrder" type="Integer">22</attr>   
+        <attr name="Desc" >Your XMPP or GMail Password.</attr>
+		<attr name="Category">Required</attr>
+		<attr name="SpecialType">Password</attr>
+	</datadef>
+	<datadef name="Host">
+	   	<attr name="EditOrder" type="Integer">11</attr>
+	  	<attr name="Desc" >The URL of the XMPP server. (Google is talk.google.com)</attr>	  
+		<attr name="Category">Required</attr>
+	</datadef>
+	<datadef name="User">
+	   <attr name="EditOrder" type="Integer">21</attr>   
+	   <attr name="Desc" >Your XMPP or GMail Password.</attr>		 	    	    
+	<attr name="Category">Required</attr>
+	</datadef>
+		<datadef name="Port">
+		<attr name="EditOrder" type="Integer">12</attr>
+	   	<attr name="Desc" >The Port of the XMPP server. (default is 5222)</attr>	    
+		<attr name="Category">Required</attr>
+	</datadef>
+	<datadef name="Receiver">
+	   <attr name="EditOrder" type="Integer">1</attr>
+	   <attr name="Desc" >The recipient of the message (Jabbar or GMail address))</attr>	    	    
+		<attr name="Category">Required</attr>
+	</datadef>
+	<datadef name="Service">
+	   	<attr name="EditOrder" type="Integer">13</attr>    
+	   	<attr name="Desc" >The XMPP Service provider. (Google is google.com)</attr>	  	    
+		<attr name="Category">Required</attr>
+	</datadef>
+</nodedef>
+</nodedefs>
