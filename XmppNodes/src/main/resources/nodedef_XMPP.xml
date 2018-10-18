@@ -15,7 +15,7 @@
 	</datadef>
 	<datadef name="User">
 	   <attr name="EditOrder" type="Integer">21</attr>   
-	   <attr name="Desc" >Your XMPP or GMail Password.</attr>		 	    
+	   <attr name="Desc" >Your XMPP or GMail User</attr>		 	    
 		<attr name="Category">Required</attr>
 	</datadef>
 	<datadef name="StartingPresence">
@@ -65,7 +65,7 @@
 	</datadef>
 	<datadef name="User">
 	   <attr name="EditOrder" type="Integer">21</attr>   
-	   <attr name="Desc" >Your XMPP or GMail Password.</attr>		 	    	    
+	   <attr name="Desc" >Your XMPP or GMail User.</attr>		 	    	    
 	<attr name="Category">Required</attr>
 	</datadef>
 		<datadef name="Port">
